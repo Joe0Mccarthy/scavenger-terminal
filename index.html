@@ -3,30 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HL 观测站 | Cyclescavenger</title>
+    <title>Sovereign Terminal | Cyclescavenger</title>
     <style>
-        :root { --main-color: #00ff41; --bg-color: #050505; }
-        body { background: var(--bg-color); color: var(--main-color); font-family: 'Courier New', Courier, monospace; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; overflow: hidden; }
-        /* 模拟扫描线特效 */
-        body::before { content: " "; display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06)); z-index: 2; background-size: 100% 2px, 3px 100%; pointer-events: none; }
-        .container { width: 90%; max-width: 450px; text-align: center; border: 1px solid var(--main-color); padding: 30px; box-shadow: 0 0 15px rgba(0, 255, 65, 0.2); z-index: 3; }
-        h1 { font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 30px; text-transform: uppercase; }
-        .link-card { display: block; padding: 15px; margin: 15px 0; border: 1px solid var(--main-color); color: var(--main-color); text-decoration: none; transition: all 0.2s; position: relative; font-weight: bold; }
-        .link-card:hover { background: var(--main-color); color: var(--bg-color); box-shadow: 0 0 20px var(--main-color); }
-        .footer { margin-top: 20px; font-size: 0.7rem; opacity: 0.6; }
+        :root { --main-color: #00ff41; --bg-color: #050505; --accent-color: #58a6ff; }
+        body { background: var(--bg-color); color: var(--main-color); font-family: 'Courier New', Courier, monospace; display: flex; flex-direction: column; align-items: center; min-height: 100vh; margin: 0; padding: 40px 0; }
+        .container { width: 90%; max-width: 450px; z-index: 3; }
+        
+        /* 头部视觉 */
+        .header { text-align: center; margin-bottom: 30px; border: 1px solid var(--main-color); padding: 20px; box-shadow: 0 0 10px rgba(0,255,65,0.1); }
+        .header h1 { font-size: 1rem; letter-spacing: 3px; margin: 0; }
+        
+        /* 区块标题 */
+        .section-title { font-size: 0.8rem; opacity: 0.7; margin: 25px 0 10px 5px; text-transform: uppercase; border-left: 3px solid var(--main-color); padding-left: 10px; }
+
+        /* 按钮基础样式 */
+        .link-card { display: flex; align-items: center; justify-content: center; padding: 14px; margin: 10px 0; border: 1px solid var(--main-color); color: var(--main-color); text-decoration: none; transition: 0.2s; font-weight: bold; font-size: 0.9rem; }
+        .link-card:hover { background: var(--main-color); color: var(--bg-color); box-shadow: 0 0 15px var(--main-color); }
+        
+        /* 推广链接特殊样式 (武装库) */
+        .promo-card { border-color: var(--accent-color); color: var(--accent-color); }
+        .promo-card:hover { background: var(--accent-color); color: var(--bg-color); box-shadow: 0 0 15px var(--accent-color); }
+
+        .footer { margin-top: 40px; font-size: 0.7rem; opacity: 0.4; text-align: center; letter-spacing: 1px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🛰️ CYCLE SCAVENGER TERMINAL</h1>
-        
-        <!-- 修改下面的链接为你的实际地址 -->
-        <a class="link-card" href="https://cyclescavenger.com">01. 观测站总索引 (NOTION)</a>
-        <a class="link-card" href="https://link.cyclescavenger.com">02. 主权武装库 (TOOLS)</a>
-        <a class="link-card" href="https://app.hyperliquid.xyz">03. HYPERLIQUID 协议入口</a>
-        <a class="link-card" href="https://t.me">04. 拾荒者私域 (TELEGRAM)</a>
+        <div class="header">
+            <h1>🛰️ CYCLE SCAVENGER</h1>
+            <p style="font-size: 0.7rem; margin-top: 10px; opacity: 0.8;">解构巨头围猎 · 守护个人资产主权</p>
+        </div>
 
-        <div class="footer">STATUS: ENCRYPTED | AUTH: SCV-001</div>
+        <!-- 第一层：指挥中心 (社交/内容) -->
+        <div class="section-title">COMMAND CENTER / 观测站</div>
+        <a class="link-card" href="https://cyclescavenger.com">🌐 NOTION 观测站主门户</a>
+        <a class="link-card" href="你的X链接">🐦 X (TWITTER) 实时解构</a>
+        <a class="link-card" href="你的YT链接">📺 YOUTUBE 逻辑演示</a>
+        <a class="link-card" href="你的TG频道">📢 TELEGRAM 频道 (信息流)</a>
+        <a class="link-card" href="你的TG群组">💬 拾荒者营地 (交流群)</a>
+
+        <!-- 第二层：武装库 (推广工具) -->
+        <div class="section-title" style="border-left-color: var(--accent-color);">SOVEREIGN ARSENAL / 武装库</div>
+        <a class="link-card promo-card" href="你的HL链接">⚡ HYPERLIQUID 协议入口</a>
+        <a class="link-card promo-card" href="你的交易所链接">🏦 BINANCE / OKX 入金通道</a>
+        <a class="link-card promo-card" href="你的Wise链接">💳 WISE / IFAST 离岸跳板</a>
+        <a class="link-card promo-card" href="你的券商链接">📈 IBKR 盈透证券配置</a>
+
+        <div class="footer">SYSTEM STATUS: ACTIVE | ENCRYPTED LINKTREE V2.0</div>
     </div>
 </body>
 </html>
