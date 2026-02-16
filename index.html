@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HL 观测站 | Cyclescavenger</title>
+    <style>
+        :root { --main-color: #00ff41; --bg-color: #050505; }
+        body { background: var(--bg-color); color: var(--main-color); font-family: 'Courier New', Courier, monospace; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; overflow: hidden; }
+        /* 模拟扫描线特效 */
+        body::before { content: " "; display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06)); z-index: 2; background-size: 100% 2px, 3px 100%; pointer-events: none; }
+        .container { width: 90%; max-width: 450px; text-align: center; border: 1px solid var(--main-color); padding: 30px; box-shadow: 0 0 15px rgba(0, 255, 65, 0.2); z-index: 3; }
+        h1 { font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 30px; text-transform: uppercase; }
+        .link-card { display: block; padding: 15px; margin: 15px 0; border: 1px solid var(--main-color); color: var(--main-color); text-decoration: none; transition: all 0.2s; position: relative; font-weight: bold; }
+        .link-card:hover { background: var(--main-color); color: var(--bg-color); box-shadow: 0 0 20px var(--main-color); }
+        .footer { margin-top: 20px; font-size: 0.7rem; opacity: 0.6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🛰️ CYCLE SCAVENGER TERMINAL</h1>
+        
+        <!-- 修改下面的链接为你的实际地址 -->
+        <a class="link-card" href="https://cyclescavenger.com">01. 观测站总索引 (NOTION)</a>
+        <a class="link-card" href="https://link.cyclescavenger.com">02. 主权武装库 (TOOLS)</a>
+        <a class="link-card" href="https://app.hyperliquid.xyz">03. HYPERLIQUID 协议入口</a>
+        <a class="link-card" href="https://t.me">04. 拾荒者私域 (TELEGRAM)</a>
+
+        <div class="footer">STATUS: ENCRYPTED | AUTH: SCV-001</div>
+    </div>
+</body>
+</html>
